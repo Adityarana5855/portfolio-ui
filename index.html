@@ -1,150 +1,335 @@
-<!DOCTYPE html>
+<!doctype html>
+
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | Creative Developer</title>
-    <meta name="description" content="A creative developer portfolio showcasing projects and skills.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <!-- Phosphor Icons -->
-    <script src="https://unpkg.com/@phosphor-icons/web"></script>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title>Portfolio | Creative Developer</title>
+
+<meta
+  name="description"
+  content="A creative developer portfolio showcasing projects and skills."
+/>
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+<link
+  href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap"
+  rel="stylesheet"
+/>
+
+<link rel="stylesheet" href="style.css" />
+
+<!-- Phosphor Icons -->
+<script src="https://unpkg.com/@phosphor-icons/web"></script>
+```
+
+  </head>
+
+  <body>
     <div class="blob blob-1"></div>
     <div class="blob blob-2"></div>
-    
-    <header class="header">
-        <nav class="nav-container">
-            <a href="#" class="logo">Portfo<span>.</span></a>
-            <ul class="nav-links">
-                <li><a href="#home" class="active">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <div class="menu-toggle">
-                <i class="ph ph-list"></i>
-            </div>
-        </nav>
-    </header>
 
-    <main>
-        <!-- Hero Section -->
-        <section id="home" class="hero section">
-            <div class="hero-content">
-                <h2 class="animate-up">Hi, I'm <span class="gradient-text">Aditya Pratap Singh</span></h2>
-                <h1 class="animate-up delay-1">Computer Science & <br> Engineering Student</h1>
-                <p class="animate-up delay-2">Passionate developer pursuing my degree at Chandigarh University, focusing on solving problems and building systems.</p>
-                <div class="hero-cta animate-up delay-3">
-                    <a href="#projects" class="btn btn-primary">View Work</a>
-                    <a href="#contact" class="btn btn-outline">Let's Talk</a>
-                </div>
-            </div>
-            <div class="hero-image-container animate-in">
-                <!-- Using a subtle glass card for hero visual -->
-                <div class="glass-card hero-visual">
-                    <i class="ph-fill ph-code block-icon"></i>
-                    <div class="code-lines">
-                        <div class="line"></div>
-                        <div class="line short"></div>
-                        <div class="line"></div>
-                        <div class="line medium"></div>
-                    </div>
-                </div>
-            </div>
-        </section>
+```
+<!-- Header -->
+<header class="header">
+  <nav class="nav-container">
+    <a href="#" class="logo">Portfo<span>.</span></a>
 
-        <!-- About Section -->
-        <section id="about" class="about section">
-            <div class="section-header reveal">
-                <h2>About Me</h2>
-                <div class="line-decorator"></div>
-            </div>
-            <div class="about-grid">
-                <div class="about-text reveal">
-                    <p>I am a passionate B.E. Computer Science & Engineering student at Chandigarh University. I have a strong foundation in C++, Python, Data Structures, and Algorithms.</p>
-                    <p>My academic background includes an intermediate from St. Theresa's Convent School and matriculation from Sant Gyaneshwar Model School. I enjoy tackling complex problems and learning new technologies.</p>
-                    
-                </div>
-                <div class="skills-container reveal delay-1">
-                    <div class="skill-tag">C++</div>
-                    <div class="skill-tag">Python</div>
-                    <div class="skill-tag">Java</div>
-                    <div class="skill-tag">Data Structures & Algorithms</div>
-                    <div class="skill-tag">OOPS</div>
-                    <div class="skill-tag">Problem Solving</div>
-                    <div class="skill-tag">Git & VS Code</div>
-                    <div class="skill-tag">HTML & CSS</div>
-                    <div class="skill-tag">JavaScript</div>
-                    <div class="skill-tag">DBMS</div>
-                </div>
-            </div>
-        </section>
+    <ul class="nav-links">
+      <li><a href="#home" class="active">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
 
-        <!-- Projects Section -->
-        <section id="projects" class="projects section">
-            <div class="section-header reveal">
-                <h2>Selected Works</h2>
-                <div class="line-decorator"></div>
-            </div>
-            <div class="projects-grid">
-                <!-- Project 1 -->
-                <div class="project-card glass-card reveal">
-                    <div class="project-img placeholder-1"></div>
-                    <div class="project-info">
-                        <h3>Machine Failure Prediction</h3>
-                        <p>Built a machine failure prediction system using Python. Performed data preprocessing, feature analysis, and implemented ML models to detect early failure patterns, improving maintenance efficiency.</p>
-                        <div class="project-links">
-                            <a href="#" class="link-btn"><i class="ph ph-github-logo"></i> Code</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Project 2 -->
-                <div class="project-card glass-card reveal delay-1">
-                    <div class="project-img placeholder-2"></div>
-                    <div class="project-info">
-                        <h3>Traffic Vehicle Detection</h3>
-                        <p>Developed a real-time vehicle detection system using Python and computer vision techniques. Applied frame-by-frame analysis to identify vehicles for traffic monitoring.</p>
-                        <div class="project-links">
-                            <a href="#" class="link-btn"><i class="ph ph-github-logo"></i> Code</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+    <div class="menu-toggle">
+      <i class="ph ph-list"></i>
+    </div>
+  </nav>
+</header>
 
-        <!-- Contact Section -->
-        <section id="contact" class="contact section">
-            <div class="section-header reveal">
-                <h2>Get In Touch</h2>
-                <div class="line-decorator"></div>
-            </div>
-            <div class="contact-content reveal">
-                <p>I'm currently open for new opportunities. Whether you have a question or just want to say hi, I'll try my best to get back to you!</p>
-                <p style="margin-bottom: 30px; font-weight: bold; color: var(--text-main);">adityapratapsingh200906@gmail.com | +91-9034109905 <br> Karnal, Haryana</p>
-                <a href="mailto:adityapratapsingh200906@gmail.com" class="btn btn-primary lg-btn">Say Hello</a>
-                
-                <div class="social-links">
-                    <a href="https://github.com/Adityarana5855" aria-label="GitHub"><i class="ph-fill ph-github-logo"></i></a>
-                    <a href="https://www.linkedin.com/in/aditya-pratap-singh-34bb44314" aria-label="LinkedIn"><i class="ph-fill ph-linkedin-logo"></i></a>
-                    <a href="https://leetcode.com/u/adityarana_0101/" aria-label="LeetCode" style="font-size: 1.8rem; display:flex; align-items:center;">
-                        <i class="ph-fill ph-code"></i>
-                    </a>
-                    <a href="https://www.hackerrank.com/profile/adityapratapsi51" aria-label="HackerRank" style="font-size: 1.8rem; display:flex; align-items:center;">
-                        <i class="ph-fill ph-terminal"></i>
-                    </a>
-                </div>
-            </div>
-        </section>
-    </main>
+<main>
+  <!-- ================= HERO SECTION ================= -->
+  <section id="home" class="hero section">
+    <div class="hero-content">
+      <h2 class="animate-up">
+        Hi, I'm
+        <span class="gradient-text">Aditya Pratap Singh</span>
+      </h2>
 
-    <footer>
-        <p>&copy; 2026 Aditya Pratap Singh. Built with <i class="ph-fill ph-heart"></i> and Vanilla JS.</p>
-    </footer>
+      <h1 class="animate-up delay-1">
+        Computer Science & <br />
+        Engineering Student
+      </h1>
 
-    <script src="script.js"></script>
-</body>
+      <p class="animate-up delay-2">
+        Passionate developer pursuing my degree at Chandigarh University,
+        focusing on solving problems and building systems.
+      </p>
+
+      <div class="hero-cta animate-up delay-3">
+        <a href="#projects" class="btn btn-primary">View Work</a>
+        <a href="#contact" class="btn btn-outline">Let's Talk</a>
+      </div>
+    </div>
+
+    <div class="hero-image-container animate-in">
+      <div class="glass-card hero-visual">
+        <i class="ph-fill ph-code block-icon"></i>
+
+        <div class="code-lines">
+          <div class="line"></div>
+          <div class="line short"></div>
+          <div class="line"></div>
+          <div class="line medium"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= ABOUT SECTION ================= -->
+  <section id="about" class="about section">
+    <div class="section-header reveal">
+      <h2>About Me</h2>
+      <div class="line-decorator"></div>
+    </div>
+
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <p>
+          I am a passionate B.E. Computer Science & Engineering student at
+          Chandigarh University. I have a strong foundation in C++,
+          Python, Data Structures, and Algorithms.
+        </p>
+
+        <p>
+          My academic background includes an intermediate from St.
+          Theresa's Convent School and matriculation from Sant Gyaneshwar
+          Model School. I enjoy tackling complex problems and learning new
+          technologies.
+        </p>
+      </div>
+
+      <div class="skills-container reveal delay-1">
+        <div class="skill-tag">C++</div>
+        <div class="skill-tag">Python</div>
+        <div class="skill-tag">Java</div>
+        <div class="skill-tag">Data Structures & Algorithms</div>
+        <div class="skill-tag">OOPS</div>
+        <div class="skill-tag">Problem Solving</div>
+        <div class="skill-tag">Git & VS Code</div>
+        <div class="skill-tag">HTML & CSS</div>
+        <div class="skill-tag">JavaScript</div>
+        <div class="skill-tag">React.js</div>
+        <div class="skill-tag">DBMS</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PROJECTS SECTION ================= -->
+  <section id="projects" class="projects section">
+    <div class="section-header reveal">
+      <h2>Selected Works</h2>
+      <div class="line-decorator"></div>
+    </div>
+
+    <div class="projects-grid">
+
+      <!-- ================= PROJECT 1 ================= -->
+      <div class="project-card glass-card reveal">
+        <div class="project-img placeholder-1"></div>
+
+        <div class="project-info">
+          <h3>Machine Failure Prediction</h3>
+
+          <p>
+            Built a machine failure prediction system using Python.
+            Performed data preprocessing, feature analysis, and implemented
+            ML models to detect early failure patterns, improving
+            maintenance efficiency.
+          </p>
+
+          <div class="project-links">
+            <a href="#" class="link-btn">
+              <i class="ph ph-github-logo"></i>
+              Code
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ================= PROJECT 2 ================= -->
+      <div class="project-card glass-card reveal delay-1">
+        <div class="project-img placeholder-2"></div>
+
+        <div class="project-info">
+          <h3>Traffic Vehicle Detection</h3>
+
+          <p>
+            Developed a real-time vehicle detection system using Python and
+            computer vision techniques. Applied frame-by-frame analysis to
+            identify vehicles for traffic monitoring.
+          </p>
+
+          <div class="project-links">
+            <a href="#" class="link-btn">
+              <i class="ph ph-github-logo"></i>
+              Code
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ================= PROJECT 3 ================= -->
+      <div class="project-card glass-card reveal delay-2">
+        <div class="project-img placeholder-3"></div>
+
+        <div class="project-info">
+          <h3>Net-Cu — Internet Speed Test</h3>
+
+          <p>
+            Built a responsive internet speed testing application using
+            React.js that measures download speed, upload speed, and
+            network latency with real-time performance visualization and
+            test history.
+          </p>
+
+          <div class="project-links">
+
+            <!-- GitHub -->
+            <a
+              href="https://github.com/Adityarana5855/Net-Cu"
+              class="link-btn"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="ph ph-github-logo"></i>
+              Code
+            </a>
+
+            <!-- Live Demo -->
+            <a
+              href="https://net-cu.vercel.app/"
+              class="link-btn"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="ph ph-arrow-square-out"></i>
+              Live Demo
+            </a>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= CONTACT SECTION ================= -->
+  <section id="contact" class="contact section">
+    <div class="section-header reveal">
+      <h2>Get In Touch</h2>
+      <div class="line-decorator"></div>
+    </div>
+
+    <div class="contact-content reveal">
+      <p>
+        I'm currently open for new opportunities. Whether you have a
+        question or just want to say hi, I'll try my best to get back to
+        you!
+      </p>
+
+      <p
+        style="
+          margin-bottom: 30px;
+          font-weight: bold;
+          color: var(--text-main);
+        "
+      >
+        adityapratapsingh200906@gmail.com |
+        +91-9034109905
+        <br />
+        Karnal, Haryana
+      </p>
+
+      <a
+        href="mailto:adityapratapsingh200906@gmail.com"
+        class="btn btn-primary lg-btn"
+      >
+        Say Hello
+      </a>
+
+      <!-- Social Links -->
+      <div class="social-links">
+
+        <!-- GitHub -->
+        <a
+          href="https://github.com/Adityarana5855"
+          aria-label="GitHub"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i class="ph-fill ph-github-logo"></i>
+        </a>
+
+        <!-- LinkedIn -->
+        <a
+          href="https://www.linkedin.com/in/aditya-pratap-singh-34bb44314"
+          aria-label="LinkedIn"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i class="ph-fill ph-linkedin-logo"></i>
+        </a>
+
+        <!-- LeetCode -->
+        <a
+          href="https://leetcode.com/u/adityarana_0101/"
+          aria-label="LeetCode"
+          target="_blank"
+          rel="noopener noreferrer"
+          style="
+            font-size: 1.8rem;
+            display: flex;
+            align-items: center;
+          "
+        >
+          <i class="ph-fill ph-code"></i>
+        </a>
+
+        <!-- HackerRank -->
+        <a
+          href="https://www.hackerrank.com/profile/adityapratapsi51"
+          aria-label="HackerRank"
+          target="_blank"
+          rel="noopener noreferrer"
+          style="
+            font-size: 1.8rem;
+            display: flex;
+            align-items: center;
+          "
+        >
+          <i class="ph-fill ph-terminal"></i>
+        </a>
+
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <p>
+    &copy; 2026 Aditya Pratap Singh. Built with
+    <i class="ph-fill ph-heart"></i> and Vanilla JS.
+  </p>
+</footer>
+
+<script src="script.js"></script>
+```
+
+  </body>
 </html>

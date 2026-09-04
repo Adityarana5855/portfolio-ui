@@ -373,7 +373,7 @@ ul {
 }
 
 /* Placeholders for project images using gradients */
-.placeholder-1 { background: linear-gradient(45deg, #1e293b, #334155); }
+.placeholder-1 { background: linear-gradient(45deg, #1e293b, #27364a); }
 .placeholder-2 { background: linear-gradient(45deg, #0f172a, #1e1b4b); }
 .placeholder-3 { background: linear-gradient(45deg, #18181b, #27272a); }
 

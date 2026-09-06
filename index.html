@@ -1,327 +1,622 @@
 <!doctype html>
-
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Portfolio | Creative Developer</title>
+    <title>Aditya Pratap Singh | Creative Developer</title>
 
     <meta
       name="description"
-      content="A creative developer portfolio showcasing projects and skills."
+      content="Aditya Pratap Singh — Creative Developer building interactive digital experiences."
     />
 
+    <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
     <link
-      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
 
+    <!-- Phosphor Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css"
+    />
+
+    <!-- Your CSS -->
     <link rel="stylesheet" href="style.css" />
 
-    <!-- Phosphor Icons -->
-    <script src="https://unpkg.com/@phosphor-icons/web"></script>
-    
+    <!-- Three.js -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"
+      defer
+    ></script>
+
+    <!-- Your JS -->
+    <script src="script.js" defer></script>
   </head>
 
   <body>
-    <div class="blob blob-1"></div>
-    <div class="blob blob-2"></div>
+    <!-- ==================================================
+         LOADER
+    ================================================== -->
 
-    
-    <!-- Header -->
-    <header class="header">
-      <nav class="nav-container">
-        <a href="#" class="logo">Portfo<span>.</span></a>
+    <div class="loader" id="loader">
+      <div class="loader-content">
+        <div class="loader-number" id="loader-number">0</div>
 
-        <ul class="nav-links">
-          <li><a href="#home" class="active">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-
-        <div class="menu-toggle">
-          <i class="ph ph-list"></i>
+        <div class="loader-progress">
+          <span id="loader-line"></span>
         </div>
+
+        <p>INITIALIZING EXPERIENCE</p>
+      </div>
+    </div>
+
+    <!-- ==================================================
+         CUSTOM CURSOR
+    ================================================== -->
+
+    <div class="cursor-dot" id="cursor-dot"></div>
+
+    <div class="cursor-ring" id="cursor-ring"></div>
+
+    <div class="cursor-text" id="cursor-text">EXPLORE</div>
+
+    <!-- ==================================================
+         NAVIGATION
+    ================================================== -->
+
+    <header class="navbar" id="navbar">
+      <a href="#home" class="logo magnetic" data-cursor="HOME">
+        APS<span>.</span>
+      </a>
+
+      <nav class="desktop-nav">
+        <a href="#about" class="nav-link" data-cursor="ABOUT"> About </a>
+
+        <a href="#skills" class="nav-link" data-cursor="SKILLS"> Skills </a>
+
+        <a href="#work" class="nav-link" data-cursor="WORK"> Work </a>
+
+        <a href="#contact" class="nav-link" data-cursor="CONTACT"> Contact </a>
       </nav>
+
+      <a href="#contact" class="nav-button magnetic" data-cursor="TALK">
+        Let's Talk
+        <i class="ph ph-arrow-up-right"></i>
+      </a>
     </header>
 
-    <main>
-      <!-- ================= HERO SECTION ================= -->
-      <section id="home" class="hero section">
-        <div class="hero-content">
-          <h2 class="animate-up">
-            Hi, I'm
-            <span class="gradient-text">Aditya Pratap Singh</span>
-          </h2>
+    <!-- ==================================================
+         MAIN
+    ================================================== -->
 
-          <h1 class="animate-up delay-1">
-            Computer Science & <br />
-            Engineering Student
+    <main>
+      <!-- ==============================================
+             01 — HERO
+        =============================================== -->
+
+      <section class="hero" id="home">
+        <canvas id="three-canvas"></canvas>
+
+        <div class="hero-overlay"></div>
+
+        <div class="hero-grid"></div>
+
+        <div class="hero-content">
+          <p class="eyebrow reveal">01 — CREATIVE DEVELOPER</p>
+
+          <h1 class="hero-title">
+            <span class="hero-line reveal"> I BUILD </span>
+
+            <span class="hero-line reveal">
+              <span class="outline"> DIGITAL </span>
+            </span>
+
+            <span class="hero-line reveal">
+              EXPERIENCES<span class="accent-dot">.</span>
+            </span>
           </h1>
 
-          <p class="animate-up delay-2">
-            Passionate developer pursuing my degree at Chandigarh University,
-            focusing on solving problems and building systems.
-          </p>
+          <div class="hero-bottom reveal">
+            <p>
+              Computer Science & Engineering Student
+              <br />
+              creating interactive digital experiences.
+            </p>
 
-          <div class="hero-cta animate-up delay-3">
-            <a href="#projects" class="btn btn-primary">View Work</a>
-            <a href="#contact" class="btn btn-outline">Let's Talk</a>
+            <a href="#work" class="hero-button magnetic" data-cursor="EXPLORE">
+              Explore Work
+
+              <span>
+                <i class="ph ph-arrow-down"></i>
+              </span>
+            </a>
           </div>
         </div>
 
-        <div class="hero-image-container animate-in">
-          <div class="glass-card hero-visual">
-            <i class="ph-fill ph-code block-icon"></i>
+        <div class="scroll-indicator">
+          <span>SCROLL</span>
 
-            <div class="code-lines">
-              <div class="line"></div>
-              <div class="line short"></div>
-              <div class="line"></div>
-              <div class="line medium"></div>
-            </div>
+          <div></div>
+        </div>
+
+        <div class="hero-location">HARYANA / INDIA</div>
+      </section>
+
+      <!-- ==============================================
+             02 — MARQUEE
+        =============================================== -->
+
+      <section class="marquee-section">
+        <div class="marquee">
+          <div class="marquee-track">
+            <span>CREATIVE DEVELOPMENT</span>
+            <b>✦</b>
+
+            <span>3D EXPERIENCES</span>
+            <b>✦</b>
+
+            <span>WEB DEVELOPMENT</span>
+            <b>✦</b>
+
+            <span>MACHINE LEARNING</span>
+            <b>✦</b>
+
+            <span>COMPUTER VISION</span>
+            <b>✦</b>
+
+            <span>CREATIVE DEVELOPMENT</span>
+            <b>✦</b>
+
+            <span>3D EXPERIENCES</span>
+            <b>✦</b>
           </div>
         </div>
       </section>
 
-      <!-- ================= ABOUT SECTION ================= -->
-      <section id="about" class="about section">
-        <div class="section-header reveal">
-          <h2>About Me</h2>
-          <div class="line-decorator"></div>
+      <!-- ==============================================
+             03 — ABOUT
+        =============================================== -->
+
+      <section class="about-section section" id="about">
+        <div class="section-number">03</div>
+
+        <div class="section-top reveal">
+          <p class="section-label">ABOUT ME</p>
+
+          <span> WHO I AM </span>
+        </div>
+
+        <div class="about-heading reveal">
+          <h2>
+            TURNING
+            <span>IDEAS</span>
+            INTO
+            <span>EXPERIENCES.</span>
+          </h2>
         </div>
 
         <div class="about-grid">
-          <div class="about-text reveal">
-            <p>
-              I am a passionate B.E. Computer Science & Engineering student at
-              Chandigarh University. I have a strong foundation in C++, Python,
-              Data Structures, and Algorithms.
-            </p>
-
-            <p>
-              My academic background includes an intermediate from St. Theresa's
-              Convent School and matriculation from Sant Gyaneshwar Model
-              School. I enjoy tackling complex problems and learning new
-              technologies.
+          <div class="about-left reveal">
+            <p class="about-big">
+              I'm Aditya Pratap Singh, a Computer Science student who enjoys
+              building things that are functional, interactive and visually
+              engaging.
             </p>
           </div>
 
-          <div class="skills-container reveal delay-1">
-            <div class="skill-tag">C++</div>
-            <div class="skill-tag">Python</div>
-            <div class="skill-tag">Java</div>
-            <div class="skill-tag">Data Structures & Algorithms</div>
-            <div class="skill-tag">OOPS</div>
-            <div class="skill-tag">Problem Solving</div>
-            <div class="skill-tag">Git & VS Code</div>
-            <div class="skill-tag">HTML & CSS</div>
-            <div class="skill-tag">JavaScript</div>
-            <div class="skill-tag">React.js</div>
-            <div class="skill-tag">Node.js</div>
-            <div class="skill-tag">DBMS</div>
-            <div class="skill-tag">Machine Learning</div>
-            
+          <div class="about-right reveal">
+            <p>
+              I work across web development, machine learning, computer vision
+              and interactive experiences.
+            </p>
+
+            <p>
+              My goal is to combine technology and design to create memorable
+              digital products.
+            </p>
+
+            <div class="about-meta">
+              <div>
+                <span> BASED IN </span>
+
+                <strong> HARYANA, INDIA </strong>
+              </div>
+
+              <div>
+                <span> EDUCATION </span>
+
+                <strong> CHANDIGARH UNIVERSITY </strong>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      <!-- ================= PROJECTS SECTION ================= -->
-      <section id="projects" class="projects section">
-        <div class="section-header reveal">
-          <h2>Selected Works</h2>
-          <div class="line-decorator"></div>
-        </div>
+      <!-- ==============================================
+             04 — 3D CHARACTER
+        =============================================== -->
 
-        <div class="projects-grid">
-          <!-- ================= PROJECT 1 ================= -->
-          <div class="project-card glass-card reveal delay-1">
-            <div class="project-img placeholder-1"></div>
+      <section class="character-section section" id="character">
+        <div class="character-bg"></div>
 
-            <div class="project-info">
-              <h3>Machine Failure Prediction</h3>
+        <div class="character-copy reveal">
+          <p class="section-label">04 — INTERACTIVE 3D</p>
 
-              <p>
-                Developed a machine learning classification system to predict
-                machine failures using operational and environmental data.
-                Multiple machine learning algorithms were trained and compared,
-                with Gradient Boosting achieving the best accuracy of 88.38%.
-              </p>
+          <h2>
+            BUILD
+            <span>IN 3D.</span>
+          </h2>
 
-              <div class="project-links">
-                <!-- GitHub -->
-                <a
-                  href="https://github.com/Adityarana5855/Machine-Failure-Prediction"
-                  class="link-btn"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <i class="ph ph-github-logo"></i>
-                  Code
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <!-- ================= PROJECT 2 ================= -->
-          <div class="project-card glass-card reveal delay-2">
-            <div class="project-img placeholder-2"></div>
-
-            <div class="project-info">
-              <h3>Traffic Vehicle Detection</h3>
-
-              <p>
-                Developed a real-time vehicle detection system using Python and
-                computer vision techniques. Applied frame-by-frame analysis to
-                identify vehicles for traffic monitoring.
-              </p>
-
-              <div class="project-links">
-                <a href="#" class="link-btn">
-                  <i class="ph ph-github-logo"></i>
-                  Code
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <!-- ================= PROJECT 3 ================= -->
-          <div class="project-card glass-card reveal delay-2">
-            <div class="project-img placeholder-3"></div>
-
-            <div class="project-info">
-              <h3>Net-Cu — Internet Speed Test</h3>
-
-              <p>
-                Built a responsive internet speed testing application using
-                React.js that measures download speed, upload speed, and network
-                latency with real-time performance visualization and test
-                history.
-              </p>
-
-              <div class="project-links">
-                <!-- GitHub -->
-                <a
-                  href="https://github.com/Adityarana5855/Net-Cu"
-                  class="link-btn"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <i class="ph ph-github-logo"></i>
-                  Code
-                </a>
-
-                <!-- Live Demo -->
-                <a
-                  href="https://net-cu.vercel.app/"
-                  class="link-btn"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <i class="ph ph-arrow-square-out"></i>
-                  Live Demo
-                </a>
-              </div>
-            </div>
-          </div>
-          
-        </div>
-      </section>
-
-      <!-- ================= CONTACT SECTION ================= -->
-      <section id="contact" class="contact section">
-        <div class="section-header reveal">
-          <h2>Get In Touch</h2>
-          <div class="line-decorator"></div>
-        </div>
-
-        <div class="contact-content reveal">
           <p>
-            I'm currently open for new opportunities. Whether you have a
-            question or just want to say hi, I'll try my best to get back to
-            you!
-          </p>
-          <p
-            style="margin-bottom: 30px; font-weight: bold; color: var(--text-main);"
-          >
-            adityapratapsingh200906@gmail.com | +91-9034109905
+            I don't just build interfaces.
             <br />
-            Karnal, Haryana
+            I build experiences that move, react and feel alive.
           </p>
+        </div>
 
-          <a
-            href="https://mail.google.com/mail/?view=cm&fs=1&to=adityapratapsingh200906@gmail.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="btn btn-primary lg-btn"
-          >
-            Say Hello
-          </a>
+        <canvas id="character-canvas" class="character-canvas"></canvas>
 
-          
+        <div class="character-info">
+          <span> 3D CHARACTER </span>
 
-          <!-- Social Links -->
-          <div class="social-links">
-            <!-- GitHub -->
+          <span> MOVE YOUR CURSOR </span>
+        </div>
+      </section>
+
+      <!-- ==============================================
+             05 — SKILLS
+        =============================================== -->
+
+      <section class="skills-section section" id="skills">
+        <div class="section-number">05</div>
+
+        <div class="section-top reveal">
+          <p class="section-label">TOOLKIT</p>
+
+          <span> TECHNOLOGIES </span>
+        </div>
+
+        <div class="skills-heading reveal">
+          <h2>
+            TOOLS &
+            <span>TECHNOLOGIES.</span>
+          </h2>
+        </div>
+
+        <div class="skills-wrap reveal">
+          <span data-cursor="CODE"> HTML </span>
+
+          <span data-cursor="STYLE"> CSS </span>
+
+          <span data-cursor="CODE"> JAVASCRIPT </span>
+
+          <span data-cursor="REACT"> REACT </span>
+
+          <span data-cursor="PYTHON"> PYTHON </span>
+
+          <span data-cursor="ML"> MACHINE LEARNING </span>
+
+          <span data-cursor="VISION"> COMPUTER VISION </span>
+
+          <span data-cursor="3D"> THREE.JS </span>
+
+          <span data-cursor="GIT"> GIT / GITHUB </span>
+        </div>
+      </section>
+
+      <!-- ==============================================
+             06 — PROJECTS
+        =============================================== -->
+
+      <section class="work-section section" id="work">
+        <div class="section-number">06</div>
+
+        <div class="section-top reveal">
+          <p class="section-label">SELECTED WORK</p>
+
+          <span> 03 PROJECTS </span>
+        </div>
+
+        <div class="work-heading reveal">
+          <h2>
+            PROJECTS
+            <span>THAT SHIP.</span>
+          </h2>
+        </div>
+
+        <!-- PROJECT 01 -->
+
+        <article class="project-card project-machine reveal" data-project>
+          <div class="project-number">01</div>
+
+          <div class="project-content">
+            <p class="project-type">MACHINE LEARNING</p>
+
+            <h3>
+              Machine Failure
+              <br />
+              Prediction
+            </h3>
+
+            <p class="project-description">
+              Machine learning project focused on predicting machine failures
+              using industrial sensor data and classification techniques.
+            </p>
+
+            <div class="project-tags">
+              <span>Python</span>
+              <span>Machine Learning</span>
+              <span>Pandas</span>
+              <span>Scikit-learn</span>
+            </div>
+
             <a
-              href="https://github.com/Adityarana5855"
-              aria-label="GitHub"
+              href="https://github.com/Adityarana5855/Machine-Failure-Prediction"
               target="_blank"
               rel="noopener noreferrer"
+              class="project-link magnetic"
+              data-cursor="OPEN"
             >
-              <i class="ph-fill ph-github-logo"></i>
-            </a>
+              VIEW CODE
 
-            <!-- LinkedIn -->
+              <i class="ph ph-arrow-up-right"></i>
+            </a>
+          </div>
+
+          <div class="project-visual">
+            <div class="machine-visual">
+              <div class="machine-ring ring-one"></div>
+
+              <div class="machine-ring ring-two"></div>
+
+              <div class="machine-ring ring-three"></div>
+
+              <div class="machine-core">AI</div>
+            </div>
+          </div>
+        </article>
+
+        <!-- PROJECT 02 -->
+
+        <article class="project-card project-netcu reveal" data-project>
+          <div class="project-number">02</div>
+
+          <div class="project-content">
+            <p class="project-type">WEB APPLICATION</p>
+
+            <h3>Net-Cu</h3>
+
+            <p class="project-description">
+              A modern web project designed to provide an interactive and
+              responsive digital experience.
+            </p>
+
+            <div class="project-tags">
+              <span>ReactJs</span>
+              <span>Web</span>
+            </div>
+
+            <div class="project-links">
+              <a
+                href="https://net-cu.vercel.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="project-link magnetic"
+                data-cursor="LIVE"
+              >
+                LIVE SITE
+
+                <i class="ph ph-arrow-up-right"></i>
+              </a>
+
+              <a
+                href="https://github.com/Adityarana5855/Net-Cu"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="project-link magnetic"
+                data-cursor="CODE"
+              >
+                GITHUB
+
+                <i class="ph ph-arrow-up-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="project-visual browser-visual">
+            <div class="browser-window">
+              <div class="browser-top">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+
+              <div class="browser-content">
+                <div class="browser-nav"></div>
+
+                <div class="browser-line large"></div>
+
+                <div class="browser-line"></div>
+
+                <div class="browser-line short"></div>
+
+                <div class="browser-box"></div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- PROJECT 03 -->
+
+        <article class="project-card project-traffic reveal" data-project>
+          <div class="project-number">03</div>
+
+          <div class="project-content">
+            <p class="project-type">COMPUTER VISION</p>
+
+            <h3>
+              Traffic Vehicle
+              <br />
+              Detection
+            </h3>
+
+            <p class="project-description">
+              Developed a real-time vehicle detection system using Python and
+              computer vision techniques. Applied frame-by-frame analysis to
+              identify vehicles for traffic monitoring.
+            </p>
+
+            <div class="project-tags">
+              <span>Python</span>
+              <span>Computer Vision</span>
+              <span>OpenCV</span>
+              <span>Real-Time</span>
+            </div>
+
             <a
-              href="https://www.linkedin.com/in/aditya-pratap-singh-34bb44314"
-              aria-label="LinkedIn"
+              href="#"
+              class="project-link magnetic"
+              data-cursor="CODE"
+              onclick="return false;"
+            >
+              VIEW CODE
+
+              <i class="ph ph-arrow-up-right"></i>
+            </a>
+          </div>
+
+          <div class="project-visual traffic-visual">
+            <div class="traffic-grid"></div>
+
+            <div class="road-line road-one"></div>
+
+            <div class="road-line road-two"></div>
+
+            <div class="vehicle vehicle-one">
+              <span></span>
+            </div>
+
+            <div class="vehicle vehicle-two">
+              <span></span>
+            </div>
+
+            <div class="vehicle vehicle-three">
+              <span></span>
+            </div>
+
+            <div class="scan-line"></div>
+          </div>
+        </article>
+      </section>
+
+      <!-- ==============================================
+             07 — STATEMENT
+        =============================================== -->
+
+      <section class="statement-section section">
+        <div class="statement-bg">CREATE</div>
+
+        <div class="statement-content reveal">
+          <p>MY APPROACH</p>
+
+          <h2>
+            CODE
+            <span>WITH</span>
+            PURPOSE.
+          </h2>
+
+          <h3>
+            DESIGN
+            <span>WITH</span>
+            INTENT.
+          </h3>
+        </div>
+      </section>
+
+      <!-- ==============================================
+             08 — CONTACT
+        =============================================== -->
+
+      <section class="contact-section section" id="contact">
+        <div class="section-number">08</div>
+
+        <div class="contact-content">
+          <p class="section-label reveal">HAVE A PROJECT?</p>
+
+          <h2 class="reveal">
+            LET'S
+
+            <span> BUILD </span>
+
+            SOMETHING.
+          </h2>
+
+          <div class="contact-actions">
+            <a
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=adityapratapsingh200906@gmail.com"
               target="_blank"
               rel="noopener noreferrer"
+              class="contact-button magnetic reveal"
+              data-cursor="EMAIL"
             >
-              <i class="ph-fill ph-linkedin-logo"></i>
+              <span>SAY HELLO</span>
+              <i class="ph ph-arrow-up-right"></i>
             </a>
 
-            <!-- LeetCode -->
-            <a
-              href="https://leetcode.com/u/adityarana_0101/"
-              aria-label="LeetCode"
-              target="_blank"
-              rel="noopener noreferrer"
-              style="font-size: 1.8rem; display: flex; align-items: center"
-            >
-              <i class="ph-fill ph-code"></i>
-            </a>
+            <div class="contact-details reveal">
+              <a
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=adityapratapsingh200906@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                adityapratapsingh200906@gmail.com
+              </a>
 
-            <!-- HackerRank -->
-            <a
-              href="https://www.hackerrank.com/profile/adityapratapsi51"
-              aria-label="HackerRank"
-              target="_blank"
-              rel="noopener noreferrer"
-              style="font-size: 1.8rem; display: flex; align-items: center"
-            >
-              <i class="ph-fill ph-terminal"></i>
-            </a>
+              <span> Karnal, Haryana </span>
+            </div>
           </div>
         </div>
       </section>
     </main>
 
-    <!-- ================= FOOTER ================= -->
-    <footer>
-      <p>
-        &copy; 2026 Aditya Pratap Singh. Built with
-        <i class="ph-fill ph-heart"></i> and Vanilla JS.
-      </p>
-    </footer>
+    <!-- ==================================================
+         FOOTER
+    ================================================== -->
 
-    <script src="script.js"></script>
-    
+    <footer>
+      <div>© 2026 ADITYA PRATAP SINGH</div>
+
+      <div class="footer-links">
+        <a
+          href="https://github.com/Adityarana5855"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          GitHub
+        </a>
+
+        <a
+          href="https://www.linkedin.com/in/aditya-pratap-singh-34bb44314"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          LinkedIn
+        </a>
+
+        <a
+          href="https://leetcode.com/u/adityarana_0101/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          LeetCode
+        </a>
+      </div>
+    </footer>
   </body>
 </html>
